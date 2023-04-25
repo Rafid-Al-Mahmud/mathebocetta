@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .url {
+            display: block;
+            border: 1px solid rgb(140, 140, 140);
+            padding: 5px;
+            box-sizing: border-box;
+            color: rgb(35, 155, 215);
+            cursor: text;
+            outline: none;
+        }
+
+        .url:focus {
+            border-color: rgb(35, 155, 215);
+        }
+
+        .noedit {
+            display: inline;
+            color: rgb(140, 140, 140);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="url" contenteditable="true" id="textbox">
+        <div class="noedit" contenteditable="false">http://twitter.com/</div>username
+    </div>
+    <script>
+        var analyzeText = function () {
+            var textbox = document.getElementById('textbox');
+            var textVal = textbox.innerHTML;
+            var urlString = '<div class="noedit" contenteditable="false">http://twitter.com/</div>';
+
+            if (textVal.length < urlString.length) {
+                textbox.innerHTML = urlString;
+                textbox.focus();
+            }
+            setTimeout(function () { analyzeText(); }, 100);
+        };
+
+        (function () { analyzeText(); })();
+    </script>
+</body>
+
+</html>
