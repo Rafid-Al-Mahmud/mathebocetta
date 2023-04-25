@@ -100,19 +100,6 @@
     margin: 10px 0px;*/
 }
 
-#msgs>div.msg>div {
-    margin-left: 50px;
-}
-
-#msgs>div.msg>div.msg-head {
-    color: red
-}
-
-#msgs>div.msg>div.msg-body {
-    width: 70vw;
-    word-wrap: break-word;
-}
-
 h1 {
     text-align: center;
 }
@@ -150,7 +137,7 @@ h1 {
 }
 
 #msgs>div.msg>div {
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 #msgs>div.msg>div.msg-head {
@@ -160,6 +147,15 @@ h1 {
 #msgs>div.msg>div.msg-body {
     width: 70vw;
     word-wrap: break-word;
+}
+
+@media screen and (max-width: 480px) {
+    #msgs>div.msg>div.msg-body {
+        width: 50vw;
+    }
+    #msgs>div.msg>div.msg-body>div>pre {
+        font-size: small;
+    }
 }
 
 h1 {
