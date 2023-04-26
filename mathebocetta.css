@@ -153,7 +153,7 @@ h1 {
     #msgs>div.msg>div.msg-body {
         width: 50vw;
     }
-    #msgs>div.msg>div.msg-body>div>pre {
+    #msgs>div.msg>div.msg-body>div>pre,#msgs>div.msg>div.msg-body>div,#msgs>div.msg>div.msg-body,#msgs>div.msg>div.msg-head {
         font-size: small;
     }
 }
